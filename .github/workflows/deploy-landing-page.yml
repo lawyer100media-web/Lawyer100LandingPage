@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - "landing page/index.html"
-      - "landing page/assets/**"
+      - "index.html"
+      - "assets/**"
       - ".github/workflows/deploy-landing-page.yml"
   workflow_dispatch:
 
@@ -33,8 +33,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site
-          cp "landing page/index.html" _site/index.html
-          cp -R "landing page/assets" _site/assets
+          cp "index.html" _site/index.html
+          cp -R "assets" _site/assets
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
